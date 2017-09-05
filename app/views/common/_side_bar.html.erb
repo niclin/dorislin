@@ -2,12 +2,11 @@
 <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
   <div class="sidebar-content">
     <h1 class="sidebar-heading"> <%= link_to "Doris Lin", root_path %></h1>
-    <p class="sidebar-p">I am a creative illustrator and graphic designer with more than 10 years of experience. </p>
-    <p class="sidebar-p">Originally from Toronto, currently based in London. </p>
+    <p class="sidebar-p"> 我是一名 UI 設計師，有一年以上的網站 UI 設計經驗，會手繪、電繪、平面設計，對於美感有自己的執著。 </p>
     <ul class="sidebar-menu">
-      <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
-      <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>
-      <li class="<%= 'active' if current_page?(contact_path) %>"><%= link_to "Get in touch", contact_path %></li>
+      <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "作品集", root_path %></li>
+      <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "關於我", about_path %></li>
+      <li class="<%= 'active' if current_page?(contact_path) %>"><%= link_to "聯繫我", contact_path %></li>
     </ul>
     <p class="social"><a href="#" data-animate-hover="pulse" class="external facebook"><i class="fa fa-facebook"></i></a><a href="#" data-animate-hover="pulse" class="external gplus"><i class="fa fa-google-plus"></i></a><a href="#" data-animate-hover="pulse" class="external twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="external instagram"><i class="fa fa-instagram"></i></a><a href="#" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></p>
     <div class="copyright">
