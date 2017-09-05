@@ -21,6 +21,18 @@
 //= require imagesloaded.pkgd.min
 //= require_tree .
 
+masonry();
+
+$(function () {
+
+    offCanvas();
+    lightbox();
+    carousels();
+    utils();
+    demo();
+
+});
+
 /* for demo purpose only - can be deleted */
 
 function demo() {
