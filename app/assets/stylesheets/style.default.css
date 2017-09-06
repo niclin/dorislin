@@ -895,9 +895,7 @@ a:active {
 .box-masonry .box-masonry-hover-text-header p {
   font-size: 14px;
 }
-.box-masonry .box-masonry-hover-text-header h4 a {
-  color: #555555;
-}
+
 .box-masonry .box-masonry-hover-center {
   position: absolute;
   width: 100%;
@@ -955,6 +953,10 @@ a:active {
 }
 
 @media screen and (min-width: 970px) {
+  .box-masonry .box-masonry-hover-text-header h4 a {
+    color: #555555;
+  }
+
   .box-masonry .box-masonry-image.with-hover-overlay:before {
     display: block;
     position: absolute;
