@@ -5,7 +5,6 @@ class Admin::GalleriesController < ApplicationController
 
   def new
     @gallery = Gallery.new
-    @gallery.attachments.build
   end
 
   def create
@@ -20,7 +19,6 @@ class Admin::GalleriesController < ApplicationController
 
   def edit
     @gallery = Gallery.find(params[:id])
-    @gallery.attachments.build if @gallery.attachments.empty?
   end
 
   def update
@@ -44,6 +42,6 @@ class Admin::GalleriesController < ApplicationController
   private
 
   def gallery_params
-    params.require(:gallery).permit(:title, :description, :image, :is_hidden, :show_text, :detail_description, :attachments_attributes => [:id, :attachment, :description, :_destroy])
+    params.require(:gallery).permit(:title, :description, :image, :is_hidden, :show_text, :detail_description, attachments_attributes: [:id, :attachment, :_destroy])
   end
 end
