@@ -14,7 +14,17 @@ class GalleryAttachmentUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  process resize_to_fit: [400, 400]
+  version :thumb do
+    process :resize_to_fit => [220, 10000]
+  end
+
+  version :medium do
+    process :resize_to_fit => [700, 10000]
+  end
+
+  version :large do
+    process :resize_to_fit => [1440,10000]
+  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
