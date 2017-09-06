@@ -4,6 +4,9 @@
       <h1><%= @gallery.title %></h1>
       <p class="lead"><%= @gallery.description %></p>
       <div id="main-slider">
+        <div class="item">
+          <%= image_tag @gallery.image.medium, class: "img-responsive" %>
+        </div>
         <% @gallery.attachments.each do |attachment| %>
         <div class="item">
           <%= image_tag attachment.attachment.url, class: "img-responsive" %>
