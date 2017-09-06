@@ -1,6 +1,6 @@
 <%= simple_form_for [:admin, @gallery] do |f| %>
   <%= f.input :title %>
-  <%= f.input :description %>
+  <%= f.input :description, as: :text %>
   <%= f.input :is_hidden %>
   <%= f.input :show_text %>
   <%= f.input :detail_description, as: :ckeditor %>
@@ -25,3 +25,8 @@
 
   <%= f.button :submit %>
 <% end %>
+
+
+<script>
+  autosize($('#gallery_description'));
+</script>

@@ -21,6 +21,7 @@
 //= require imagesloaded.pkgd.min
 //= require ckeditor/init
 //= require nested_form_fields
+//= require autosize.min
 //= require_tree .
 
 masonry();
