@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :galleries
   end
 
+  resources :galleries
+
   get "/about" => "galleries#about", :as => "about"
   get "/contact" => "galleries#contact", :as => "contact"
 end
