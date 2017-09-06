@@ -19,6 +19,7 @@
 //= require masonry.pkgd.min
 //= require owl.carousel.min
 //= require imagesloaded.pkgd.min
+//= require ckeditor/init
 //= require_tree .
 
 masonry();

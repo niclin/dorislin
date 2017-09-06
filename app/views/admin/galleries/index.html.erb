@@ -6,6 +6,7 @@
       <th>Image</th>
       <th>Title</th>
       <th>Description</th>
+      <th>Setting</th>
     </tr>
   </thead>
     <tbody>
@@ -14,6 +15,11 @@
           <td><%= image_tag gallery.image.thumb %></td>
           <td><%= gallery.title %></td>
           <td><%= gallery.description %></td>
+          <td>
+            <%= link_to "Edit", edit_admin_gallery_path(gallery) %>
+            |
+            <%= link_to "Destroy", admin_gallery_path(gallery), method: :delete, data: { confirm: "Are you sure?" } %>
+          </td>
         </tr>
       <% end %>
     </tbody>

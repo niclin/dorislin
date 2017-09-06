@@ -18,6 +18,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
+gem 'ckeditor'
 
 group :development, :test do
   gem 'byebug', platform: :mri

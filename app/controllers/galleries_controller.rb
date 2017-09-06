@@ -4,6 +4,10 @@ class GalleriesController < ApplicationController
     @galleries = Gallery.all
   end
 
+  def show
+    @gallery = Gallery.find(params[:id])
+  end
+
   def about
   end
 end
