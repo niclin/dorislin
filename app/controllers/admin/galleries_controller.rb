@@ -42,6 +42,6 @@ class Admin::GalleriesController < ApplicationController
   private
 
   def gallery_params
-    params.require(:gallery).permit(:title, :description, :image, :is_hidden, :show_text, :detail_description)
+    params.require(:gallery).permit(:title, :description, :image, :is_hidden, :show_text, :detail_description, :attachments_attributes => [:id, :attachment, :description, :_destroy])
   end
 end

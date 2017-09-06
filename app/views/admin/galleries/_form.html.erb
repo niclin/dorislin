@@ -5,5 +5,23 @@
   <%= f.input :show_text %>
   <%= f.input :detail_description, as: :ckeditor %>
   <%= f.input :image, as: :file %>
+
+<%= f.nested_fields_for :attachments do |ff| %>
+  <fieldset style="border-left: 5px solid #bbb; margin-bottom: 10px; padding: 10px;">
+    <legend>Attachment</legend>
+    <div class="form-group">
+      <%= ff.label :attachment %>
+      <%= ff.file_field :attachment, :class => "form-control" %>
+      <% if ff.object.attachment.present? %>
+      已上传档案 <%= image_tag ff.object.attachment.url, class: "img-responsive" %>
+      <% end %>
+    </div>
+    <%= ff.remove_nested_fields_link "移除这个档案", :class => "btn btn-danger" %>
+  </fieldset>
+<% end %>
+<p class="text-left">
+  <%= f.add_nested_fields_link :attachments, "新增档案", :class => "btn btn-default" %>
+</p>
+
   <%= f.button :submit %>
 <% end %>

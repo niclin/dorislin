@@ -19,9 +19,10 @@ gem 'mini_magick'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'ckeditor'
+gem 'nested_form_fields'
 
 group :development, :test do
-  gem 'byebug', platform: :mri
+  gem 'pry'
 end
 
 group :development do

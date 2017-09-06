@@ -4,11 +4,12 @@
       <h1><%= @gallery.title %></h1>
       <p class="lead"><%= @gallery.description %></p>
       <div id="main-slider">
-        <div class="item"><img alt="" src="img/slider/3.jpg" class="img-responsive"></div>
-        <div class="item"><img alt="" src="img/slider/2.jpg" class="img-responsive"></div>
-        <div class="item"><img alt="" src="img/slider/1.jpg" class="img-responsive"></div>
+        <% @gallery.attachments.each do |attachment| %>
+        <div class="item">
+          <%= image_tag attachment.attachment.url, class: "img-responsive" %>
+        </div>
+        <% end %>
       </div>
-      <!-- /#main-slider-->
       <p><%= sanitize(@gallery.detail_description) %></p>
     </div>
   </div>

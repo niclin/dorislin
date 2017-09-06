@@ -20,6 +20,7 @@
 //= require owl.carousel.min
 //= require imagesloaded.pkgd.min
 //= require ckeditor/init
+//= require nested_form_fields
 //= require_tree .
 
 masonry();
