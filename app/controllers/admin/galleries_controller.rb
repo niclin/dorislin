@@ -5,12 +5,13 @@ class Admin::GalleriesController < ApplicationController
 
   def new
     @gallery = Gallery.new
+    @gallery.attachments.build
   end
 
   def create
     @gallery = Gallery.new(gallery_params)
 
-    if @gallery.save
+    if @gallery.save!
       redirect_to admin_galleries_path
     else
       render :new
@@ -19,6 +20,7 @@ class Admin::GalleriesController < ApplicationController
 
   def edit
     @gallery = Gallery.find(params[:id])
+    @gallery.attachments.build if @gallery.attachments.empty?
   end
 
   def update
