@@ -13,6 +13,5 @@ module Dorislin
     # -- all .rb files in that directory are automatically loaded.
     config.action_view.sanitized_allowed_tags = Rails::Html::WhiteListSanitizer.allowed_tags + %w(table tr td)
     config.action_view.sanitized_allowed_attributes = Rails::Html::WhiteListSanitizer.allowed_attributes + %w(style border)
-    config.assets.precompile += %w( ckeditor/* )
   end
 end
