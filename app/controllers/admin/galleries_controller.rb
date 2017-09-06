@@ -8,6 +8,13 @@ class Admin::GalleriesController < ApplicationController
   end
 
   def create
+    @gallery = Gallery.new(gallery_params)
+
+    if @gallery.save
+      redirect_to admin_galleries_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -17,5 +24,11 @@ class Admin::GalleriesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def gallery_params
+    params.require(:gallery).permit(:title, :description, :image, :show_text)
   end
 end

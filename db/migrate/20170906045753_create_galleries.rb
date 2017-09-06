@@ -5,6 +5,7 @@ class CreateGalleries < ActiveRecord::Migration[5.0]
       t.string :description
       t.string :image
       t.boolean :is_hidden, default: false
+      t.boolean :show_text, default: false
 
       t.timestamps
     end
