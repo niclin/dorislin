@@ -13,14 +13,14 @@
       <%= ff.label :attachment %>
       <%= ff.file_field :attachment, :class => "form-control" %>
       <% if ff.object.attachment.present? %>
-      已上传档案 <%= image_tag ff.object.attachment.url, class: "img-responsive" %>
+      已經上傳檔案 <%= image_tag ff.object.attachment.url, class: "img-responsive" %>
       <% end %>
     </div>
-    <%= ff.remove_nested_fields_link "移除这个档案", :class => "btn btn-danger" %>
+    <%= ff.remove_nested_fields_link "移除這個檔案", :class => "btn btn-danger" %>
   </fieldset>
 <% end %>
 <p class="text-left">
-  <%= f.add_nested_fields_link :attachments, "新增档案", :class => "btn btn-default" %>
+  <%= f.add_nested_fields_link :attachments, "新增檔案", :class => "btn btn-default" %>
 </p>
 
   <%= f.button :submit %>
