@@ -23,6 +23,8 @@ gem 'nested_form_fields'
 
 group :development, :test do
   gem 'pry'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails'
 end
 
 group :development do

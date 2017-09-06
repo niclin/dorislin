@@ -1,0 +1,16 @@
+development: &default
+  adapter: postgresql
+  database: dorislin_development
+  encoding: unicode
+  pool: <%= ENV.fetch("DB_POOL", ENV.fetch("MAX_THREADS", 5)) %>
+  reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 10)) %>
+  username:
+  password:
+
+test:
+  <<: *default
+  database: dorislin_test
+
+production:
+  <<: *default
+  database: dorislin_production
