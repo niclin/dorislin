@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20170906045753) do
     t.string   "title"
     t.string   "description"
     t.string   "image"
-    t.string   "is_hidden",   default: "f"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.boolean  "is_hidden",   default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end
