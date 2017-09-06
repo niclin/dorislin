@@ -25,6 +25,7 @@ group :development, :test do
   gem 'pry'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
+  gem "capistrano-rvm"
 end
 
 group :development do
