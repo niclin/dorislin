@@ -4,7 +4,7 @@
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
       <div class="box-masonry">
       <%= link_to gallery_path(gallery), class: "box-masonry-image with-hover-overlay #{render_hover_icon(gallery)}" do %>
-          <%= image_tag gallery.image.url, class: "img-responsive" %>
+          <%= image_tag gallery.image.url, class: "img-responsive" if gallery.image.present? %>
       <% end %>
         <div class="<%= render_hover_text(gallery)%>">
           <h4> <%= link_to gallery.title, "#"%></h4>
