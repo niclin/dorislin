@@ -1,7 +1,7 @@
 class GalleriesController < ApplicationController
 
   def index
-    @galleries = Gallery.rank(:row_order).all
+    @galleries = Gallery.where(is_hidden: false).rank(:row_order).all
   end
 
   def show

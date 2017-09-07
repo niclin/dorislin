@@ -39,6 +39,18 @@ class Admin::GalleriesController < ApplicationController
     redirect_to admin_galleries_path
   end
 
+  def reorder
+    @gallery = Gallery.find(params[:id])
+    @gallery.row_order_position = params[:position]
+    @gallery.save!
+
+
+    respond_to do |format|
+      format.html { redirect_to admin_galleries_path }
+      format.json { render :json => { :message => "ok" }}
+    end
+  end
+
   private
 
   def gallery_params

@@ -22,6 +22,7 @@
 //= require ckeditor/init
 //= require nested_form_fields
 //= require autosize.min
+//= require jquery-ui
 //= require_tree .
 
 masonry();
