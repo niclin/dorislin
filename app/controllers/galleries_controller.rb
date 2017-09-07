@@ -16,5 +16,7 @@ class GalleriesController < ApplicationController
   end
 
   def about
+    set_page_title "About - 關於我"
+    set_page_image "https://dorislin.me/img/about.jpg"
   end
 end
