@@ -23,18 +23,14 @@
 //= require nested_form_fields
 //= require autosize.min
 //= require jquery-ui
-//= require_tree .
-
-masonry();
 
 $(function () {
-
+    masonry();
     offCanvas();
     lightbox();
     carousels();
     utils();
     demo();
-
 });
 
 /* for demo purpose only - can be deleted */
