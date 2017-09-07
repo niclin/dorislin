@@ -18,14 +18,11 @@
 
 <div class="top-control"">
   <% if user_signed_in? %>
-   <%= link_to('logout', destroy_user_session_path, method: :delete, class: "top-control__link") %>
-<% end %>
+    <%= link_to('進後台', admin_galleries_path, class: "top-control__link") %>
+  <% end %>
 </div>
 
-
 </body>
-
-
     <div id="all">
       <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
