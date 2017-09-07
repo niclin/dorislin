@@ -1,6 +1,6 @@
 class Admin::GalleriesController < ApplicationController
   def index
-    @galleries = Gallery.all
+    @galleries = Gallery.rank(:row_order).all
   end
 
   def new
