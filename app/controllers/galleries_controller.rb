@@ -4,6 +4,7 @@ class GalleriesController < ApplicationController
     @galleries = Gallery.where(is_hidden: false).rank(:row_order).all
 
     set_page_title "Portfolio - 作品集"
+    set_page_image "https://dorislin.me/img/about.jpg"
   end
 
   def show
