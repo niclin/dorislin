@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   root "galleries#index"
 
   namespace :admin do
-    resources :galleries
+    resources :galleries do
+      member do
+        post :reorder
+      end
+    end
   end
 
   resources :galleries

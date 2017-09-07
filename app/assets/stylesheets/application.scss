@@ -20,3 +20,13 @@
 @import "owl.theme";
 @import "owl.transitions";
 @import "style.default";
+
+@import "jquery-ui";
+
+.sortable .sortable_icon {
+ border: none;
+ color: #ECECEC;
+ font-size: 20px;
+ cursor: move;
+ padding-right: 10px;
+}

@@ -1,6 +1,6 @@
 class Admin::GalleriesController < ApplicationController
   def index
-    @galleries = Gallery.all
+    @galleries = Gallery.rank(:row_order).all
   end
 
   def new
@@ -37,6 +37,18 @@ class Admin::GalleriesController < ApplicationController
     @gallery.destroy
 
     redirect_to admin_galleries_path
+  end
+
+  def reorder
+    @gallery = Gallery.find(params[:id])
+    @gallery.row_order_position = params[:position]
+    @gallery.save!
+
+
+    respond_to do |format|
+      format.html { redirect_to admin_galleries_path }
+      format.json { render :json => { :message => "ok" }}
+    end
   end
 
   private

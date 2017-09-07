@@ -20,6 +20,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'ckeditor'
 gem 'nested_form_fields'
+gem 'ranked-model'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'pry'
