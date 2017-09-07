@@ -1,10 +1,11 @@
 <%= simple_form_for [:admin, @gallery] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description, as: :text %>
-  <%= f.input :is_hidden %>
-  <%= f.input :show_text %>
-  <%= f.input :detail_description, as: :ckeditor %>
+  <%= f.input :title, label: "標題" %>
+  <%= f.input :description, as: :text, label: "內文（顯示在外面）" %>
+  <%= f.input :is_hidden, label: "隱藏作品" %>
+  <%= f.input :show_text, label: "桌面版時顯示圖片下方文字" %>
+  <%= f.input :detail_description, as: :ckeditor, label: "內頁說明" %>
   <%= f.input :image, as: :file %>
+  <%= image_tag f.object.image.url, class: "img-responsive" if f.object.image.present? %>
 
 <%= f.nested_fields_for :attachments do |ff| %>
   <fieldset style="border-left: 5px solid #bbb; margin-bottom: 10px; padding: 10px;">
@@ -20,7 +21,7 @@
   </fieldset>
 <% end %>
 <p class="text-left">
-  <%= f.add_nested_fields_link :attachments, "新增檔案", :class => "btn btn-default" %>
+  <%= f.add_nested_fields_link :attachments, "新增內頁圖片", :class => "btn btn-default" %>
 </p>
 
   <%= f.button :submit, class: "btn btn-primary" %>
