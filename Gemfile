@@ -23,6 +23,7 @@ gem 'nested_form_fields'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
 gem 'seo_helper', '~> 1.0'
+gem 'devise'
 
 group :development, :test do
   gem 'pry'
@@ -37,5 +38,3 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

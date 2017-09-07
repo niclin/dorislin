@@ -1,4 +1,6 @@
 class Admin::GalleriesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @galleries = Gallery.rank(:row_order).all
   end
