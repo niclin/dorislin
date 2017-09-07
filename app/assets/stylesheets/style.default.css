@@ -1996,30 +1996,6 @@ h6,
   line-height: 1.2;
   color: #000000;
 }
-h2,
-.h2 {
-  font-size: 38px;
-}
-h3,
-.h3 {
-  font-size: 32px;
-  font-weight: 700;
-}
-h4,
-.h4 {
-  font-size: 24px;
-  font-weight: 700;
-}
-h5,
-.h5 {
-  font-size: 16px;
-  font-weight: 700;
-}
-h6,
-.h6 {
-  font-size: 14px;
-  font-weight: 700;
-}
 h1,
 .h1,
 h2,
