@@ -22,6 +22,7 @@ gem 'ckeditor'
 gem 'nested_form_fields'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
+gem 'seo_helper', '~> 1.0'
 
 group :development, :test do
   gem 'pry'
