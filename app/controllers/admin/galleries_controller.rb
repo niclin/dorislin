@@ -20,11 +20,11 @@ class Admin::GalleriesController < ApplicationController
   end
 
   def edit
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
   end
 
   def update
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
 
     if @gallery.update(gallery_params)
       redirect_to admin_galleries_path
@@ -34,7 +34,7 @@ class Admin::GalleriesController < ApplicationController
   end
 
   def destroy
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
 
     @gallery.destroy
 
@@ -42,7 +42,7 @@ class Admin::GalleriesController < ApplicationController
   end
 
   def reorder
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
     @gallery.row_order_position = params[:position]
     @gallery.save!
 
