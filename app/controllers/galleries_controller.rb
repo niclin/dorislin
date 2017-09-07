@@ -11,7 +11,7 @@ class GalleriesController < ApplicationController
 
     set_page_title @gallery.title
     set_page_description @gallery.description
-    set_page_image "https://dorislin.info#{@gallery.image.url}"
+    set_page_image "https://dorislin.me#{@gallery.image.url}"
   end
 
   def about
