@@ -24,6 +24,8 @@ gem 'ranked-model'
 gem 'jquery-ui-rails'
 gem 'seo_helper', '~> 1.0'
 gem 'devise'
+gem 'friendly_id', '~> 5.0.0'
+gem "babosa"
 
 group :development, :test do
   gem 'pry'

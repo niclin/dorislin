@@ -8,7 +8,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
 
     set_page_title @gallery.title
     set_page_description @gallery.description
