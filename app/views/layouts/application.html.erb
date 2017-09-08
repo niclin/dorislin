@@ -10,7 +10,7 @@
     <%= render_page_keywords_meta_tag %>
 
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'application', media: 'all', :async => true %>
 
     <%= yield :javascripts %>
   </head>
