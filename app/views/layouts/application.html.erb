@@ -10,8 +10,8 @@
     <%= render_page_keywords_meta_tag %>
 
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+
     <%= yield :javascripts %>
   </head>
   <body>
@@ -39,4 +39,7 @@
     </div>
   </body>
   <%= render "common/google_analytics" if Rails.env.production? %>
+
+  <%= javascript_include_tag 'application', :async => true %>
+  <%= yield :handwrite_javascript %>
 </html>
