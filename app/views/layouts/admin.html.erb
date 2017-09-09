@@ -11,7 +11,7 @@
 
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'admin', media: 'all' %>
 
     <%= yield :javascripts %>
   </head>
@@ -36,8 +36,7 @@
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <%= javascript_include_tag 'application', async: true %>
+    <%= javascript_include_tag 'admin', async: true %>
     <%= render "common/google_analytics" if Rails.env.production? %>
   </body>
 </html>

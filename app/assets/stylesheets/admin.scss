@@ -1,0 +1,14 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "jquery-ui";
+@import "style.default";
+@import "top-control";
+
+.sortable .sortable_icon {
+  border: none;
+  color: #ECECEC;
+  font-size: 20px;
+  cursor: move;
+  padding-right: 10px;
+}
