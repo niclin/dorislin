@@ -10,19 +10,17 @@
     <%= render_page_keywords_meta_tag %>
 
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', :async => true %>
+    <%= javascript_include_tag 'application', async: true %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
 
     <%= yield :javascripts %>
   </head>
-  <body>
-
-<div class="top-control"">
-  <% if user_signed_in? %>
-    <%= link_to('進後台', admin_galleries_path, class: "top-control__link") %>
-  <% end %>
-</div>
-
-</body>
+<body id="<%= "#{controller_name}-#{action_name}"%>" >
+  <div class="top-control"">
+    <% if user_signed_in? %>
+      <%= link_to('進後台', admin_galleries_path, class: "top-control__link") %>
+    <% end %>
+  </div>
     <div id="all">
       <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
@@ -39,7 +37,5 @@
     </div>
   </body>
   <%= render "common/google_analytics" if Rails.env.production? %>
-
-  <%= javascript_include_tag 'application', :async => true %>
   <%= yield :handwrite_javascript %>
 </html>
