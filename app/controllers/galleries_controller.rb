@@ -10,7 +10,7 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.friendly.find(params[:id])
 
     set_page_title @gallery.title
-    set_page_description @gallery.description
+    set_page_description @gallery.detail_description
     set_page_image "https://dorislin.me#{@gallery.image.url}"
   end
 
